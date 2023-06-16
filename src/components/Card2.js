@@ -1,95 +1,54 @@
 import React from "react";
-import { Box, Grid, Typography } from "@mui/material";
-
-const Card2 = () => {
+import { Box, Grid } from "@mui/material";
+import {
+  MainBox,
+  CardOuterBox,
+  CardInnerBox,
+  FirstHeading,
+  Paragraph,
+} from "../styles/Card2Style";
+import { LastBox } from "../styles/CardsStyle";
+const Cards = () => {
   return (
     <div>
       <Grid conatiner mt={10}>
-        <Box
-          style={{
-            display: "flex",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-          }}
-        >
-          <Box style={{ display: "flex", flexDirection: "column" }}>
-            <Box
-              width="330px"
-              height="300px"
-              style={{
-                background: "#004A80",
-                display: "flex",
-
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+        <MainBox>
+          <CardOuterBox>
+            <CardInnerBox>
               <Box>
                 <img src=".././/.//assets/card33.png" />
               </Box>
-            </Box>
+            </CardInnerBox>
 
-            <Box>
-              <Typography
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "600",
-                  textAlign: "center",
-                }}
-              >
-                Mock Up Exam Preparation
-              </Typography>
-              <Typography
-                width="300px"
-                style={{ fontSize: "15px", textAlign: "justify" }}
-              >
+            <LastBox>
+              <FirstHeading variant="h5">Mock Up Exam Preparation</FirstHeading>
+              <Paragraph variant="body2">
                 Preparely is offering various mockup tests with each subject for
                 each module. It provides flexible practice mockup tests.
-              </Typography>
-            </Box>
-          </Box>
+              </Paragraph>
+            </LastBox>
+          </CardOuterBox>
 
-          <Box style={{ display: "flex", flexDirection: "column" }}>
-            <Box
-              width="330px"
-              height="300px"
-              style={{
-                background: "#004A80",
-                display: "flex",
-
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+          <CardOuterBox>
+            <CardInnerBox>
               <Box>
                 <img src=".././/.//assets/card22.png" />
               </Box>
-            </Box>
+            </CardInnerBox>
 
-            <Box>
-              <Typography
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "600",
-                  textAlign: "center",
-                }}
-              >
-                PDF Preparation
-              </Typography>
-              <Typography
-                width="300px"
-                style={{ fontSize: "15px", textAlign: "justify" }}
-              >
+            <LastBox>
+              <FirstHeading variant="h5">PDF Preparation </FirstHeading>
+              <Paragraph variant="body2">
                 Preparely has related mcqs section for every chapter. Students
                 can practice to get an eye on preparation level of theirs at the
                 end of every chapter.
-              </Typography>
-            </Box>
-          </Box>
-        </Box>
+              </Paragraph>
+            </LastBox>
+          </CardOuterBox>
+        </MainBox>
       </Grid>
     </div>
   );
 };
 
-export default Card2;
+export default Cards;
